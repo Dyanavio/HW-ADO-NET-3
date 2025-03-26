@@ -78,7 +78,7 @@ namespace HW_ADO_NET_3
                 using (IDbConnection connection = databaseProvider.CreateConnection())
                 {
                     string query = "Select * from Items where Items.Calories < @Cal";
-                    IDbCommand command = databaseProvider.CreateCommand(query, connection);
+                    IDbCommand command = databaseProvider.CreateCommand(query, connection); 
 
                     command.Parameters.Add(databaseProvider.CreateParameter("@Cal", cal));
 
